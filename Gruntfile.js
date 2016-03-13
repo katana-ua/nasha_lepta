@@ -432,7 +432,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'https://katana-ua:965b069f94ab648744774886f0333a1446911650@github.com/katana-ua/nasha_lepta.git',
+          remote: 'https://katana-ua:ab850172bd7a7b020b44985b90dc562c5a49bc7d@github.com/katana-ua/nasha_lepta.git',
           branch: 'gh-pages'
         }
       }
