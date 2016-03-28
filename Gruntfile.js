@@ -151,7 +151,10 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      css: {
+         src: [ 'dist/styles/main.css' ]
+      }
     },
 
     // Add vendor prefixed styles
@@ -465,7 +468,13 @@ module.exports = function (grunt) {
               '{.tmp,public}\\scripts\\appRequests.js']
           }
         ]
-      }
+      },
+     css: {
+        dest: 'dist/styles/combined.css',
+        src: [
+           'dist/styles/*.css'
+        ]
+     }
     },
     //additional configuration created as useminPrepare can work correctly only with one file
     uglify: {
@@ -523,11 +532,13 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    'concat',
+    'concat:dist',
     'ngAnnotate',
     'copy:dist',
     'cdnify',
     'cssmin',
+    'concat:css',
+    'clean:css',
     'uglify',
     'filerev',
     'usemin',
