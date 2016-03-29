@@ -409,6 +409,18 @@ module.exports = function (grunt) {
          cwd: '<%= yeoman.app %>/styles',
          dest: 'styles/',
          src: '{,*/}*.css'
+      },
+      newcss: {
+         expand: true,
+         cwd: '<%= yeoman.dist %>/styles',
+         dest: 'styles/',
+         src: '{,*/}*.css'
+      },
+      back: {
+         expand: true,
+         cwd: 'styles/',
+         dest: '<%= yeoman.dist %>/styles',
+         src: 'combined.css'
       }
     },
 
@@ -538,9 +550,11 @@ module.exports = function (grunt) {
     'copy:css',
     'cdnify',
     'cssmin',
-    'clean:css',
+    'copy:newcss',
     'uglify',
     'filerev',
+    'copy:back',
+    'clean:css',
     'usemin',
     'htmlmin'
   ]);
