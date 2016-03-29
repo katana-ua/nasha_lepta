@@ -153,7 +153,7 @@ module.exports = function (grunt) {
       },
       server: '.tmp',
       css: {
-         src: [ 'dist/styles/main.css' ]
+         src: [ 'styles/' ]
       }
     },
 
@@ -403,6 +403,12 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      css: {
+         expand: true,
+         cwd: '<%= yeoman.app %>/styles',
+         dest: 'styles/',
+         src: '{,*/}*.css'
       }
     },
 
@@ -468,13 +474,7 @@ module.exports = function (grunt) {
               '{.tmp,public}\\scripts\\appRequests.js']
           }
         ]
-      },
-     css: {
-        dest: 'dist/styles/combined.css',
-        src: [
-           'dist/styles/*.css'
-        ]
-     }
+      }
     },
     //additional configuration created as useminPrepare can work correctly only with one file
     uglify: {
@@ -532,12 +532,12 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    'concat:dist',
+    'concat',
     'ngAnnotate',
     'copy:dist',
+    'copy:css',
     'cdnify',
     'cssmin',
-    'concat:css',
     'clean:css',
     'uglify',
     'filerev',
