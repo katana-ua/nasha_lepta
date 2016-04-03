@@ -36,6 +36,23 @@ angular
       .when('/contacts', {
           templateUrl: 'templates/directives/contacts.html'
       })
+      .when('/articles', {
+        templateUrl: 'templates/pages/articles/list.html',
+        controller: 'ArticlesListCtrl'
+      })
+      .when('/articles/new', {
+        templateUrl: 'templates/pages/articles/edit.html',
+        controller: 'ArticlesCreateCtrl'
+      })
+      .when('/articles/:id', {
+        templateUrl: 'templates/pages/articles/show.html',
+        controller: 'ArticlesShowCtrl'
+      })
+      .when('/articles/:id/edit', {
+        templateUrl: 'templates/pages/articles/edit.html',
+        controller: 'ArticlesUpdateCtrl'
+      })
+
       .otherwise({
         redirectTo: '/'
       });
