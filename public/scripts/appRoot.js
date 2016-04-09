@@ -34,7 +34,11 @@ angular
         redirectTo: '/news2016'
       })
       .when('/contacts', {
-          templateUrl: 'templates/directives/contacts.html'
+          templateUrl: 'templates/pages/contacts.html'
+      })
+      .when('/auth', {
+        templateUrl: 'templates/pages/auth.html',
+        controller: 'AuthCtrl'
       })
       .when('/articles', {
         templateUrl: 'templates/pages/articles/list.html',
@@ -51,6 +55,38 @@ angular
       .when('/articles/:id/edit', {
         templateUrl: 'templates/pages/articles/edit.html',
         controller: 'ArticlesUpdateCtrl'
+      })
+      .when('/albums', {
+        templateUrl: 'templates/pages/albums/list.html',
+        controller: 'AlbumsListCtrl'
+      })
+      .when('/albums/new', {
+        templateUrl: 'templates/pages/albums/edit.html',
+        controller: 'AlbumsCreateCtrl'
+      })
+      .when('/albums/:id', {
+        templateUrl: 'templates/pages/albums/show.html',
+        controller: 'AlbumsShowCtrl'
+      })
+      .when('/albums/:id/edit', {
+        templateUrl: 'templates/pages/albums/edit.html',
+        controller: 'AlbumsUpdateCtrl'
+      })
+      .when('/news', {
+        templateUrl: 'templates/pages/news/list.html',
+        controller: 'NewsListCtrl'
+      })
+      .when('/news/new', {
+        templateUrl: 'templates/pages/news/edit.html',
+        controller: 'NewsCreateCtrl'
+      })
+      .when('/news/:id', {
+        templateUrl: 'templates/pages/news/show.html',
+        controller: 'NewsShowCtrl'
+      })
+      .when('/news/:id/edit', {
+        templateUrl: 'templates/pages/news/edit.html',
+        controller: 'NewsUpdateCtrl'
       })
 
       .otherwise({

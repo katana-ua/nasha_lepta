@@ -20,22 +20,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
 }
 
-h1,
-h4
-{
-  color: #FFCC00;
-  text-shadow: 1px 1px 3px #000;
-  min-height: 20px;
-  margin-bottom: 20px;
-  background-color: #FF3736;
-  border: 1px solid #e3e3e3;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-  padding: 9px;
-  border-radius: 3px;
-  font-size: 1.167em;
-}
-
 h6{
   font-size: 20px;
   color: #333;
@@ -204,6 +188,31 @@ a > h6, button > h6 {
   border: 0;
 }
 
+
+/*Album carousel start*/
+.photo-caption {
+  color: #fff;
+  width:100%;
+  bottom: .0rem;
+  position: absolute;
+  background:rgba(115, 16, 36, 0.69);
+  padding: 0.5em 0;
+}
+
+.photo-with-caption-container {
+  padding-top: 3em;
+  margin: 0;
+}
+
+.photo-thumbnail {
+  margin: .1em;
+  position: relative;
+}
+
+.photo-thumbnail img:hover{
+  outline: 0.2em solid #cc0033;
+}
+/*Album carousel end*/
 
 
 /*CAROUSEL start*/
@@ -500,6 +509,21 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   min-height: 100%;
   /* the bottom margin is the negative value of the footer's height */
 }
+
+
+/*Novelty css starts*/
+.novelty-link-date {
+  background-color: white;
+  padding: 0.5em 1em;
+}
+.novelty-link-date a {
+  color: black;
+}
+
+.novelty-summary-view{
+  padding: 1em 0;
+}
+/*Novelty css ends*/
 
 
 /* Responsive: Portrait tablets and up */
