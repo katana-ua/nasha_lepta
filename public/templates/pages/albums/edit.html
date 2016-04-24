@@ -6,7 +6,7 @@
       <li ng-repeat="error in errors">{{error}}</li>
     </ul>
 
-    <a type="button" class="btn btn-success" ng-href="#/albums/{{album.id}}" ng-show="album.status">
+    <a type="button" class="btn btn-success" ng-href="#/{{albumModelsLocation}}/{{album.id}}" ng-show="album.status">
       {{album.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
     </a>
 
@@ -46,7 +46,9 @@
           <figure class="photo-thumbnail">
             <img ng-src="{{album.cover}}" class="img-responsive">
             <figcaption class="photo-caption text-center">
-              {{album.title}}
+              <div class="photo-caption-content">
+                {{album.title}}
+              </div>
             </figcaption>
           </figure>
         </div>
