@@ -453,11 +453,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-<<<<<<< HEAD
           remote: 'https://katana-ua:9d31242c2fc07cdec048c23185daf711d20e6e65@github.com/katana-ua/nasha_lepta.git',
-=======
-          remote: 'https://SergiiShapoval:880682ec0bdf06406ebda4e7148cbf70840a1161@github.com/SergiiShapoval/nasha_lepta.git',
->>>>>>> upstream/master
           branch: 'gh-pages'
         }
       }
